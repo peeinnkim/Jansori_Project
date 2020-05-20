@@ -19,21 +19,23 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){
-        // 캘린더 객체화
+        // Get a Calendar instance
         calendar = Calendar.getInstance();
-        // 현재 시, 분 설정
+        // Get the current hour and minute
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
         int minute = calendar.get(Calendar.MINUTE);
 
-        TimePickerDialog tp = new TimePickerDialog(getActivity(), AlertDialog.THEME_HOLO_LIGHT,this,hour,minute,false);
+        // TimePickerDialog Theme : THEME_HOLO_DARK
+        TimePickerDialog tp = new TimePickerDialog(getActivity(), AlertDialog.THEME_HOLO_LIGHT,this,hour,minute,true);
 
+        // Return the TimePickerDialog
         return tp;
     }
 
     public void onTimeSet(TimePicker view, int hourOfDay, int minute){
         Calendar calSet =  (Calendar) calendar.clone();
 
-        //피커에서 설정한 시간 설정
+        //피커에서 설정한 시간 셋팅
         calSet.set(Calendar.HOUR_OF_DAY, hourOfDay);
         calSet.set(Calendar.MINUTE, minute);
         calSet.set(Calendar.SECOND, 0);
@@ -54,5 +56,16 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
 
 
     }//onTimeSet
+
+    private void startAlarm(Calendar calSet) {
+        //AlarmManager am = getSystem
+    }
+
+    private void updateTimeText(Calendar c) {
+        String timeText = "Alarm set for: ";
+        timeText += DateFormat.getTimeInstance(DateFormat.SHORT).format(c); // date -> Sting
+
+
+    }
 
 }//TimePickerFragment

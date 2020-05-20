@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:focusable="true"
-    android:focusableInTouchMode="true"
-    android:paddingLeft="30dp"
-    android:paddingRight="30dp"
-    tools:context=".activity.TaskAddActivity">
+    android:paddingRight="30dp" android:paddingLeft="30dp"
+    tools:context=".activity.AddActivity">
 
     <ImageView
         android:id="@+id/ivCancel"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="7dp"
-        android:tint="#8C8C8C"
-        app:srcCompat="@drawable/ic_close_black_24dp" />
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#8C8C8C"
+        android:background="@drawable/ic_close_black_24dp" />
 
     <LinearLayout
         android:id="@+id/addLayout"
@@ -50,8 +46,8 @@
                 android:layout_centerInParent="true"
                 android:background="@android:color/transparent"
                 android:gravity="center"
-                android:hint="멋지게 밥먹기"
                 android:textColor="#ffffff"
+                android:hint="멋지게 밥먹기"
                 android:textSize="18sp" />
 
         </RelativeLayout>
@@ -75,24 +71,22 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="80dp"
             android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp">
+            android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/ivPickColor"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:tint="#78aac3"
-                app:srcCompat="@drawable/ic_palette_black_24dp" />
+                android:backgroundTint="#78aac3"
+                android:background="@drawable/ic_palette_black_24dp" />
 
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/notiLayout"
+        android:id="@+id/notilayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/colorLayout"
@@ -103,33 +97,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Notification"
-            android:textColor="#8C8C8C"
             android:textSize="20sp"
+            android:textColor="#8C8C8C"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="17dp"
-            android:layout_marginBottom="17dp"
             android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnSun"
-                android:layout_width="37dp"
-                android:layout_height="37dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_btn"
-                android:text="SUN"
-                android:textColor="#747474" />
-
-            <Button
                 android:id="@+id/btnMon"
-                android:layout_width="37dp"
-                android:layout_height="37dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
@@ -139,8 +122,8 @@
 
             <Button
                 android:id="@+id/btnTue"
-                android:layout_width="37dp"
-                android:layout_height="37dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
@@ -150,8 +133,8 @@
 
             <Button
                 android:id="@+id/btnWed"
-                android:layout_width="37dp"
-                android:layout_height="37dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
@@ -161,8 +144,8 @@
 
             <Button
                 android:id="@+id/btnThu"
-                android:layout_width="37dp"
-                android:layout_height="37dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
@@ -172,8 +155,8 @@
 
             <Button
                 android:id="@+id/btnFri"
-                android:layout_width="37dp"
-                android:layout_height="37dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
@@ -183,93 +166,60 @@
 
             <Button
                 android:id="@+id/btnSat"
-                android:layout_width="37dp"
-                android:layout_height="37dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/rounded_btn"
                 android:text="SAT"
                 android:textColor="#747474" />
-        </LinearLayout>
-    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/timeModeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/notiLayout"
-        android:layout_marginBottom="20dp"
-        android:orientation="vertical">
+            <Button
+                android:id="@+id/btnSun"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_btn"
+                android:text="SUN"
+                android:textColor="#747474" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+            <TextView
+                android:id="@+id/addAlarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:textColor="#8C8C8C"
+                android:gravity="center"
+                android:text="잔소리모드는 펭귄을 터치!"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Time"
-                    android:textColor="#8C8C8C"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/addMode"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:backgroundTint="#78aac3"
+                android:background="@drawable/penpencopy" />
 
-                <TextView
-                    android:id="@+id/addAlarm"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="9 : 00"
-                    android:paddingTop="17dp"
-                    android:paddingBottom="17dp"
-                    android:textColor="#8C8C8C"
-                    android:textSize="17dp" />
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Mode"
-                    android:textColor="#8C8C8C"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/addMode"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="일반 모드"
-                    android:textColor="#8c8c8c"
-                    android:paddingTop="17dp"
-                    android:paddingBottom="17dp"
-                    android:textSize="17dp" />
-
-            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
     <Button
         android:id="@+id/btnTaskAdd"
+        android:layout_below="@+id/notilayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/timeModeLayout"
-        android:text="SAVE" />
+        android:text="ADD" />
 
 
 </RelativeLayout>
