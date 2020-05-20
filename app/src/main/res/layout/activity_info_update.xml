@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:padding="30dp"
+    android:background="#78aac3"
+    tools:context=".activity.InfoUpdateActivity">
+
+
+    <ImageView
+        android:id="@+id/updateBack"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="23dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:tint="#ffffff"
+        app:srcCompat="@drawable/ic_navigate_before_black_24dp"/>
+
+    <TextView
+        android:id="@+id/updateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#f3cd86"
+        android:textSize="28dp"
+        android:layout_marginTop="23dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:text="프로필 변경" />
+
+
+    <ImageView
+        android:id="@+id/updateIcon"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/updateTitle"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/circle_background"
+        app:srcCompat="@drawable/new_pf"/>
+
+    <TextView
+        android:id="@+id/tvUpdateIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/updateIcon"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="25dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#eaeaea"
+        android:text="사진 변경" />
+
+    <LinearLayout
+        android:id="@+id/updateLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tvUpdateIcon"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#f3cd86"
+            android:layout_marginRight="10dp"
+            android:textSize="17dp"
+            android:text="이름" />
+
+        <EditText
+            android:id="@+id/update1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:backgroundTint="#ffffff"
+            android:textSize="20dp"
+            android:background="@null"
+            android:inputType="textPersonName"
+            android:text="김이름"/>
+    </LinearLayout>
+
+</RelativeLayout>

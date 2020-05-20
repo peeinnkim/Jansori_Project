@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4DF3CD86"
+    android:orientation="vertical"
+    tools:context=".activity.InfoDevActivity">
+
+    <ImageView
+        android:id="@+id/devBack"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:tint="#747474"
+        app:srcCompat="@drawable/ic_navigate_before_black_24dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/info_dev_bg"
+        android:orientation="vertical"
+        android:padding="30dp" />
+
+    <LinearLayout
+        android:id="@+id/goGit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#78aac3"
+            android:textSize="35dp"
+            android:text="KIM SOOHEE"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#8EB963"
+            android:text="contact me"
+            android:textColor="#ffffff"
+            android:paddingRight="3dp"
+            android:gravity="center_vertical|right"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:textColor="#b69ee8"
+            android:textSize="19dp"
+            android:text="gitHub: peeinnkim"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

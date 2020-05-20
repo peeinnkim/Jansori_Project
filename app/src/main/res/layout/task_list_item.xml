@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="115dp"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_square">
+<!--    android:descendantFocusability="blocksDescendants"-->
+
+
+    <RelativeLayout
+        android:id="@+id/task_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="15dp" android:paddingRight="30dp">
+
+        <ImageView
+            android:id="@+id/taskIcon"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/new_activate" />
+
+        <TextView
+            android:id="@+id/taskId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:visibility="gone"
+            android:textSize="5sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/taskIcon"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/taskTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="멋지게 밥먹기"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/taskIcon">
+
+                <TextView
+                    android:id="@+id/taskDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="left|bottom"
+                    android:text="매일"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_gravity="bottom"
+                    android:scaleType="centerCrop"
+                    android:tint="#ffffff"
+                    app:srcCompat="@drawable/ic_timer_black_24dp"/>
+                <TextView
+                    android:id="@+id/taskMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:text="잔소리모드"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/disableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_square"
+        android:backgroundTint="#99000000"
+        android:visibility="gone"
+        android:clickable="false"
+        android:paddingLeft="15dp"
+        android:paddingRight="30dp"/>
+
+
+
+
+
+
+</RelativeLayout>
